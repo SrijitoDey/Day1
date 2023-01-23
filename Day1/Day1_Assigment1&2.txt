@@ -1,0 +1,20 @@
+Assignment-1 ~~~~~~~~~~~~ 1.  What is JSON?   2.   What is HTTP Status codes? 3.   What is the meaning of 500 Status codes? 4.   What is No-Sql Databases?
+
+1.JSON stands for JavaScript Object Notation. It is a format for structuring data. This format is used by different web applications to communicate with each other. It is the replacement of the XML data exchange format. It is easy to struct the data compare to XML. It supports data structures like arrays and objects and the JSON documents that are rapidly executed on the server.
+2.An HTTP status code is a server response to a browser’s request. When you visit a website, your browser sends a request to the site’s server, and the server then responds to the browser’s request with a three-digit code: the HTTP status code. These status codes are the Internet equivalent of a conversation between your browser and the server. Informational responses (100 – 199)
+Successful responses (200 – 299)
+Redirection messages (300 – 399)
+Client error responses (400 – 499)
+Server error responses (500 – 599)
+3.The 500 status code "internal server error" is just that - it's an error on the server-side. This means that the server encountered something unexpected that prevented it from fulfilling the request. In some ways, it’s an ambiguous error. The server doesn’t know exactly what’s wrong, but it knows something is wrong.
+4.A NoSQL database (also known as “no SQL” or “not only SQL”) is a distributed, non-relational database designed for large-scale data storage and massively parallel, high-performance data processing across many commodity systems. Unlike the traditional relational database approach, NoSQL gives you a way to work with data closer to the application.
+
+Assignment-2
+~~~~~~~~~~~~
+1. How to display images in title bar?
+2. What is the purpose of "alt" attribute of img tag?
+3. Why do we use tbody, thead, tfoot tags?
+
+1. <link rel="icon" href="http://cdn.onlinewebfonts.com/svg/img_132120.png">
+2. To provide an alternative text for the primary image if it does not display for some reason.
+3. The <tbody> tag is used to group the body content in an HTML table. The <tbody> element is used in conjunction with the <thead> and <tfoot> elements to specify each part of a table (body, header, footer). Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page.
