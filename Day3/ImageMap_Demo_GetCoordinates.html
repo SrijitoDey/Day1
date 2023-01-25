@@ -1,0 +1,30 @@
+<html>
+<body>
+
+	<h2>Getting Coordinates using JavaScript</h2>
+	<hr/>
+
+	<p>Click on the jquery, angular or bootstrap image to read more about the topic:</p>
+
+	<img   onmousemove="getCoords(event)" src="ImageMaps.png" alt="Workplace" usemap="#workmap" width="577" height="167"  />
+				
+	<map name="workmap">
+		<area shape ="rect" coords="0,0,154,159" href="https://jquery.com/">
+		<area shape ="rect" coords="154,0,383,159" href="https://angular.io/">
+		<area shape ="rect" coords="383,0,557,159" href="https://getbootstrap.com/">
+	</map>
+
+	<h1 id="head1"></h1>
+
+<!-- 	
+	<script>
+		function   getCoords(e)
+		{
+			var obj = document.getElementById("head1");
+			obj.innerText  = "X = " + e.clientX + ",  Y = " + e.clientY;
+		}	
+	</script> -->
+
+</body>
+</html>
+

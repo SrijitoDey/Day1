@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link href="ccstyle.css" rel="stylesheet"/>
+</head>
+<body>
+    <form class="form">
+        <fieldset class="box">
+            <div class="heading">
+                <img class="icon" src="http://cdn.onlinewebfonts.com/svg/img_109099.png"/>
+                This a secure 128-bit SSL. Encrypted payment. You're Safe.
+            </div>
+
+            <div class="parform">
+                <input type="radio" id="rad1" name="radsel" value="rad1">Credit Card(Visa,Mastercard)
+                
+                <img class="smicon" src="http://lofrev.net/wp-content/photos/2016/07/visa_logo_7.jpg"/>
+                <img class="smicon" src="https://logosmarcas.net/wp-content/uploads/2020/09/Mastercard-Logo-2016-2020.png"/>
+                <input type="radio" id="rad2" name="radsel" value="rad2"/>PayPal
+                
+                <img class="smicon" src="http://www.techdigest.tv/paypal-logo.jpg"/>
+                <br><br>
+
+                Card Number
+                <span class="smmarked">The 16 digits on front of your card</span>
+                <br>
+                <input type="text" id="cardnum" name="num"/>
+                <br><br>
+                
+                <div id="exp">
+                    <span class="marked">Expiration Date</span>
+                    <br>
+                    <input type="month"/>    
+                </div>
+                <br>
+                
+                <div id="cvv">
+                    <span class="marked">CVV</span>
+                    <span class="smmarked">The last 3 digits displayed on the back of your Card</span>
+                    <br>
+                    <input type="password">
+                </div>
+                <br>
+                <span class="marked">Full Name on Card</span>
+                <br>
+                <input type="text" id="cardnum" name="num"/>
+            </div>
+            <br>
+            <div id="foot">
+                <p class="marked">You will be charged $29.00 every month</p>
+            </div>
+        </fieldset>
+
+        <input type="submit" id="sub" value="Complete" name="submit">
+    </form>
+</body>
+</html>
