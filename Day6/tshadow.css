@@ -1,0 +1,27 @@
+#heading{
+    color: blue;
+    text-shadow: 4px 4px 5px yellow;
+    font-size: 60px;
+    text-align: center;
+}
+
+.box{
+    border: 2px solid;
+    padding: 30px;
+    text-align: justify;
+    word-spacing: 12px;
+    margin: 20px;
+    text-shadow: 2px 2px 2px gray;
+}
+
+#sp1{
+    font-size: 40px;
+    color: blue;
+}
+
+#sp2{
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+    letter-spacing: 5px;
+}

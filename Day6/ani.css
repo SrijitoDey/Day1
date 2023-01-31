@@ -1,0 +1,24 @@
+img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    animation-name: animate;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+@keyframes animate{
+    from{
+        top: 0px;
+        left: 0px;
+    }
+    to{
+        top: 0px;
+        left: 300px;
+    }
+}

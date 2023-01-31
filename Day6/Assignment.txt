@@ -1,0 +1,9 @@
+1-Yes, it is possible, but you can only declare the class attribute once per HTML element. Just separate the classes you want to apply by a space.
+
+<a href="#" class="class1 class2">My Text</a>
+
+2-Visibility:hidden;
+
+display: none;
+
+opacity:0;
