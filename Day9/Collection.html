@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+    <link href="ed.css" rel="stylesheet">
+</head>
+<body>
+    <h3>Collection</h3>
+    <hr/>
+
+    <fieldset>
+        <lengend>Employee Info</lengend>
+        Employee Number:<input type="text" value="" id="eid" name="eid"/>
+        <br><br>
+        Employee Name:<input type="text" value="" id="name" name="name"/>
+        <br><br>
+        Job :  <input type="text" value=""  id="job"  name="job" />
+	    <br/><br/>
+        Salary : <input type="text" value="" id="salary" name="salary"/>
+        <br><br>
+        Dept. No.: <input type="text" value="" id="deptno" name="deptno"/>
+        <br><br>
+        <input type="button"  value="Save Employee Data"   onclick="fn_saveData()" />
+        <input type="button"  value="Delete Employee Data"  onclick="fn_deleteData()" />
+		<input type="button"  value="Clear Fields"  onclick="fn_clearFields()" />
+        <input type="button"  value="Process"  onclick="fn_process()" />
+    </fieldset>
+
+    <fieldset>
+        <legend>Output</legend>
+        <p id="out"></p>
+    </fieldset>
+
+    <script>
+        
+        var textEidObj = document.getElementById("eid");
+        var txtNameObj = document.getElementById("name");	
+        var txtJobObj = document.getElementById("job");
+        var txtSalaryObj = document.getElementById("salary");
+        var txtDeptNoObj = document.getElementById("deptno");
+        var txtOutput = document.getElementById("out");
+        var EmployeeObj = {};
+        var Employee = [];
+
+        function fn_saveData(){
+            
+
+            EmployeeObj.eid = textEidObj.value;
+            EmployeeObj.name= txtNameObj.value; 
+			EmployeeObj.job =  txtJobObj.value;
+			EmployeeObj.salary =  txtSalaryObj.value;
+			EmployeeObj.deptNo =  txtDeptNoObj.value;
+            
+            Employee.push(EmployeeObj);
+
+            var str = JSON.stringify(Employee);
+
+            localStorage.setItem("empData", str);
+            txtOutput.innerHTML = str;
+
+            
+            
+        }
+
+        function fn_process(){
+            
+        }
+
+
+
+        
+
+
+    </script>
+
+
+</body>
+</html>

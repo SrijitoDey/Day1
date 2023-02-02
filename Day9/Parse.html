@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parsing</title>
+</head>
+<body>
+
+    <fieldset>
+        <input type="button" value="Process" onclick="fn_process()">
+        <br><br>
+        <span id="outspanut"></span>
+        User Id : <span id="id"></span>
+        <br>
+        Email : <span id="email"></span>
+        <br>
+        First Name : <span id="first_name"></span>
+        <br>
+        Last Name : <span id="last_name"></span>
+        <br>
+        Avatar : <img src = "" id="avatar">
+    </fieldset>
+    <script>
+        var str = '{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"}';
+        
+        function fn_process(){
+            var userObj = JSON.parse(str);
+
+            var txtUidObj = document.getElementById("id");
+            var txtEmailObj = document.getElementById("email");
+            var txtFirstNmObj = document.getElementById("first_name");
+            var txtLastNmObj = document.getElementById("last_name");
+            var txtAvatarObj = document.getElementById("avatar");
+
+            txtUidObj.innerHTML = userObj.id;
+            txtEmailObj.innerHTML = userObj.email;
+            txtFirstNmObj.innerHTML = userObj.first_name;
+            txtLastNmObj.innerHTML = userObj.last_name;
+            txtAvatarObj.src = userObj.avatar;
+        }
+
+        
+
+    </script>
+</body>
+</html>

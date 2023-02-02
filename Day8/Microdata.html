@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+    <div itemscope itemtype="https://schema.org/Hotel">
+        <h1><span itemprop="name">Hotel Innsbruck</span></h1>
+        <img itemprop="logo" src="https://pngimg.com/uploads/pineapple/pineapple_PNG2738.png" alt="hotel logo" />
+        <span itemprop="description">A beautifully located business hotel right in the
+        heart of the alps. Watch the sun rise over the scenic Inn valley while
+        enjoying your morning coffee.</span>
+    </div>
+    <div itemscope itemtype="https://schema.org/Person">
+        <img src="https://images.unsplash.com/photo-1539090521412-7af9bbc1110b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" itemprop="image" alt="Photo of Jane Doe"/>
+        <span itemprop="name">Jane Doe</span>
+    </div>
+    <div itemscope itemtype="https://schema.org/Place">
+        <h1>What is the latitude and longitude of the <span itemprop="name">Empire State Building</span>?</h1>
+        Answer:
+        <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+          Latitude: 40 deg 44 min 54.36 sec N
+          Longitude: 73 deg 59 min 8.5 dec W
+          <meta itemprop="latitude" content="40.75" />
+          <meta itemprop="longitude" content="-73.98" />
+        </div>
+    </div>
+    <div itemscope itemtype="https://schema.org/Movie">
+        <meta itemprop="name" content="Footloose">
+        <div itemprop="potentialAction" itemscope itemtype="https://schema.org/WatchAction">
+          <a itemprop="target" href="http://example.com/player?id=123">Watch <cite>Footloose</cite></a>
+        </div>
+    </div>
+    <div itemscope itemtype="https://schema.org/Recipe">
+        <span itemprop="name">Mom's World Famous Banana Bread</span>
+        By <span itemprop="author">John Smith</span>,
+        <meta itemprop="datePublished" content="2009-05-08">May 8, 2009
+        <br>
+        <img itemprop="image" src="https://freshaprilflours.com/wp-content/uploads/2019/03/banana-bread-2.jpg"alt="Banana bread on a plate" />
+        <span itemprop="description">This classic banana bread recipe comes
+        from my mom -- the walnuts add a nice texture and flavor to the banana
+        bread.</span>
+      
+        Prep Time: <meta itemprop="prepTime" content="PT15M">15 minutes
+        Cook time: <meta itemprop="cookTime" content="PT1H">1 hour
+        Yield: <span itemprop="recipeYield">1 loaf</span>
+        Tags: <link itemprop="suitableForDiet" href="https://schema.org/LowFatDiet" />Low fat
+      
+        <div itemprop="nutrition"
+          itemscope itemtype="https://schema.org/NutritionInformation">
+          Nutrition facts:
+          <span itemprop="calories">240 calories</span>,
+          <span itemprop="fatContent">9 grams fat</span>
+        </div>
+      
+        Ingredients:
+        - <span itemprop="recipeIngredient">3 or 4 ripe bananas, smashed</span>
+        - <span itemprop="recipeIngredient">1 egg</span>
+        - <span itemprop="recipeIngredient">3/4 cup of sugar</span>
+        ...
+      
+        Instructions:
+        <span itemprop="recipeInstructions">
+        Preheat the oven to 350 degrees. Mix in the ingredients in a bowl. Add
+        the flour last. Pour the mixture into a loaf pan and bake for one hour.
+        </span>
+      
+        140 comments:
+        <div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
+          <meta itemprop="interactionType" content="https://schema.org/CommentAction" />
+          <meta itemprop="userInteractionCount" content="140" />
+        </div>
+        From Janel, May 5 -- thank you, great recipe!
+        ...
+    </div>
+    <div itemscope itemtype="https://schema.org/Restaurant">
+        <h1 itemprop="name">Fondue for Fun and Fantasy</h1>
+        <p itemprop="description">Fantastic and fun for all your cheesy occasions.</p>
+        <p>Open: <span itemprop="openingHours" content="Mo,Tu,We,Th,Fr,Sa,Su 11:30-23:00">Daily from 11:30am till 11pm</span></p>
+        <p>Phone: <span itemprop="telephone" content="+155501003333">555-0100-3333</span></p>
+        <p>View <a itemprop="hasMenu" href="http://example.com/menu">our menu</a>.</p>
+    </div>
+        
+</body>
+</html>

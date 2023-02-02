@@ -1,0 +1,12 @@
+1-JSON stands for JavaScript Object Notation
+JSON is a lightweight data interchange format
+JSON is language independent *
+JSON is "self-describing" and easy to understand.
+The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
+2-
+3-You define (and create) a JavaScript object with an object literal:
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+Array:
+let arrayName = [value1, value2, ...]; 
+
+var obj ={empno:2020, ename:"John", job:"Analyst", Salary:20000, deptno:125};

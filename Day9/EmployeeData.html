@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+    <link href="ed.css" rel="stylesheet">
+</head>
+<body>
+    <h3>Employee Data</h3>
+    <hr/>
+
+    <fieldset>
+        <lengend>Employee Info</lengend>
+        Employee Id:<input type="text" value="" id="uid" name="uid"/>
+        <br><br>
+        Employee Email:<input type="text" value="" id="email" name="email"/>
+        <br><br>
+        Security Clearence  :  <input type="text" value=""  id="token"  name="token" />
+	    <br/><br/>
+        Phone Number: <input type="text" value="" id="phone" name="phone"/>
+        <br><br>
+        <input type="button"  value="Save Employee Data"   onclick="fn_saveData()" />
+        <input type="button"  value="Delete Employee Data"  onclick="fn_deleteData()" />
+		<input type="button"  value="Clear Fields"  onclick="fn_clearFields()" />
+        <input type="button"  value="Process"  onclick="fn_process()" />
+    </fieldset>
+
+    <fieldset>
+        <legend>Output</legend>
+        <p id="out"></p>
+    </fieldset>
+
+    <script>
+        
+
+        function fn_saveData(){
+            var textUidOnj = document.getElementById("uid");
+            var txtEmailObj = document.getElementById("email");	
+            var txtTokenObj = document.getElementById("token");
+            var txtPhoneOnj = document.getElementById("phone");
+            var txtOutput = document.getElementById("out");
+
+            var EmployeeObj = {};
+
+            EmployeeObj.uid = textUidOnj.value;
+            EmployeeObj.email =  txtEmailObj.value; 
+			EmployeeObj.token =  txtTokenObj.value;
+
+            var str = JSON.stringify(EmployeeObj);
+
+            localStorage.setItem("empData", str);
+
+            txtOutput.innerHTML = str;
+            
+        }
+
+        
+
+
+    </script>
+
+
+</body>
+</html>
