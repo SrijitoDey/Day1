@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+    <link href="ed.css" rel="stylesheet">
+</head>
+<body>
+    <h3>Employee Data</h3>
+    <hr/>
+
+    <fieldset>
+        <legend>Customer Info</legend>
+        Customer Name : <input type="text" value="" id="uname" name="uname"/>
+        <br><br>
+        Joined Data : <input type="date" value="" id="joined" name="joined"/>
+        <br><br>
+        Favourite Color :  <input type="color" value=""  id="color"  name="color" />
+	    <br/><br/>
+        <input type="button"  value="Save Employee Data"   onclick="fn_saveData()" />
+    </fieldset>
+    <a href="CustomerNext.html">Next page</a>
+    
+
+    <script>
+        
+
+        function fn_saveData(){
+            var textUnameOnj = document.getElementById("uname");
+            var dateJoinedObj = document.getElementById("joined");	
+            var colorObj = document.getElementById("color");
+            
+            var EmployeeObj = {};
+
+            EmployeeObj.uname = textUnameOnj.value;
+            EmployeeObj.joined =  dateJoinedObj.value; 
+			EmployeeObj.color =  colorObj.value;
+
+            var str = JSON.stringify(EmployeeObj);
+
+            localStorage.setItem("empData", str);
+            
+        }
+
+        
+
+
+    </script>
+
+
+</body>
+</html>

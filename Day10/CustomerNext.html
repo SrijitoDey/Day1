@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+    <h2>Welcome <span id="uname"></span></h2>
+    <p id="joined"></p>
+        
+    <script>
+        var textUnameObj = document.getElementById("uname");
+        var dateJoinedObj = document.getElementById("joined");	
+        var colorObj = document.getElementById("color");
+        var txtOutput = document.getElementById("out");
+        var str = localStorage.getItem("empData");
+
+        
+            
+        var EmployeeObj = JSON.parse(str);
+
+        
+		
+        if(EmployeeObj.uname==""){
+            textUnameObj.innerHTML = "Guest"
+            dateJoinedObj.innerHTML = "Data Is Empty"
+            document.body.style.backgroundColor="#ffffff"
+            
+        }
+        else{
+            textUnameObj.innerHTML = EmployeeObj.uname;
+            dateJoinedObj.innerHTML = EmployeeObj.joined; 
+            document.body.style.backgroundColor=EmployeeObj.color;
+        }
+
+    </script>
+</body>
+</html>
