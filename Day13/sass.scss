@@ -1,0 +1,25 @@
+@mixin theme($themeShape , $themeDimensions , $themeColor : blue)
+{
+    border-radius: $themeShape;
+    width: $themeDimensions;
+    box-shadow: 2px 2px 5px $themeColor;
+    color: black;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    @include theme($themeShape : 50%, $themeDimensions : 100px,$themeColor:red)
+}
+
+.square{
+    @include theme($themeShape: 0%,$themeDimensions : 100px, $themeColor : green )
+}
+
+.rect{
+    @include theme($themeShape : 0%,$themeDimensions : 200px,$themeColor: yellow )
+}
+
+
