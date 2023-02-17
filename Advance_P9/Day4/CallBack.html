@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="width: fit-content; padding: 60px; margin: auto; text-align: center;">
+    <p id="para" >[ "Hyderabad", "Mumbai",  "Bangalore", "Gurgaon"]</p>
+    <button onclick="click1()">1st function</button>
+    <button onclick="click2()">2nd function</button>
+    <button onclick="click3()">3rd function</button>
+    </fieldset>
+    <script>
+        var citiesArray  = [ "Hyderabad", "Mumbai",  "Bangalore", "Gurgaon"];
+        var paraObj = document.getElementById("para");
+        
+
+        function click1(){
+            var new_array = citiesArray.map(func);
+            console.log("diehis");
+            function func(elem){
+            return elem.toUpperCase();
+        }
+        paraObj.innerHTML = "[ " + new_array + " ]";
+        }        
+        function click2(){
+            var new_array2 = citiesArray.map(function func2(elem){
+            return elem.slice(0,3);
+        });
+        paraObj.innerHTML = "[ " + new_array2 + " ]";
+        }        
+        function click3(){
+            var new_array3 = citiesArray.map(elem => elem.replaceAll("a" , "@"));
+
+            paraObj.innerHTML = "[ " + new_array3 + " ]";
+        }        
+        
+    </script>
+</body>
+</html>

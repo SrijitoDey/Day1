@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insert Input:
+    <input type="text" id="ii">
+    <p id="para"></p>
+    <img src="" id="image1">
+    <button onclick="pressed()">press me</button>
+
+    <script>
+        var textObj = document.getElementById("ii");
+        var paraObj = document.getElementById("para");
+        var imgObj = document.getElementById("image1");
+        
+        function pressed(){
+            switch(textObj.value){
+                case "a":
+                    paraObj.innerHTML = "point A";
+                    imgObj.src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Nature-wallpapers-hd-backgroud-1080p.jpg";
+                    break;
+                case "b":
+                    paraObj.innerHTML = "point B";
+                    break;
+                case "c":
+                    paraObj.innerHTML = "point C";
+    
+                    break;
+                default:
+                    paraObj.innerHTML  = "This is defaulted"
+            }
+
+        }
+
+    </script>
+</body>
+</html>

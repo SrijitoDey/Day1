@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Programming</h1>
+    <br>
+    <hr>
+    <br>
+    <fieldset>
+        <legend>CAlculator</legend>
+        First Number:
+        <input type="text" id="up">
+        <br>
+        <br>
+        Second Number:
+        <input type="text" id="quan">
+        <br>
+        <br>
+        <button onclick="clicking()" id="Add">Add</button>
+        <button onclick="clicking()" id="Sub">Sub</button>
+        <button onclick="clicking()" id="Multiply">Multiply</button>
+        
+        <br>
+        <br>
+        <p id="para"></p>
+    </fieldset>
+
+    <script>
+        var textObj = document.getElementById("uname");
+        var upObj = document.getElementById("up");
+        var quanObj = document.getElementById("quan");
+        var paraObj = document.getElementById("para");
+
+        function clicking(){
+            if(event.target.id =="Add"){
+                paraObj.innerHTML = parseInt(upObj.value) + parseInt(quanObj.value);
+            }
+            if(event.target.id =="Sub"){
+                paraObj.innerHTML = parseInt(upObj.value) - parseInt(quanObj.value);
+            }
+            if(event.target.id =="Multiply"){
+                paraObj.innerHTML = parseInt(upObj.value) * parseInt(quanObj.value);
+            }
+
+        }
+
+    </script>
+</body>
+</html>

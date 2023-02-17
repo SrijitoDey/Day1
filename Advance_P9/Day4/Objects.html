@@ -1,0 +1,70 @@
+<!-- Create a web page to demonstrate object creation techniques in JavaScript -->
+<html>
+<head>
+	<style>
+		div
+		{
+			border:2px solid Red;
+			color : Blue;
+			font-size: 30px;
+			height:  90px;
+			padding : 10px;
+		}
+	</style>
+</head>
+<body>
+<h3>Working with Objects in JS</h3>
+<hr/>
+<input type="button"   value="Object-1" onclick="f1()"  />
+<input type="button"   value="Object-2" onclick="f2()"  />
+<input type="button"   value="Object-3" onclick="f3()"  />
+<br></br>
+
+<div id="div1">	</div>
+
+<script> 
+var divObj = document.getElementById("div1");
+
+ function   f1()
+ {		
+		 var   e1  = {eid :  454545,   ename  :  "Smith-1",  Job :  "Angular", salary: 10000, deptno:12345};  	  
+     	
+		var str  = `Employee Id : ${e1.eid} , Employee Name : ${e1.ename} , Job : ${e1.Job} , salary : ${e1.salary}, Dept No : ${e1.deptno}`;
+  
+		divObj.innerHTML  = str;
+}	
+
+function   f2()
+ {		
+	var   e2  = {};  
+	e2.eid =  454546;
+    e2.ename  =  "Smith-2";
+    e2.Job =  "React"; 
+    e2.salary= 10000; 
+    e2.deptno=12345;
+
+	 
+	var str  = `Employee Id : ${e2.eid} , Employee Name : ${e2.ename} , Job : ${e2.Job} , salary : ${e2.salary}, Dept No : ${e2.deptno}`;
+	divObj.innerHTML  = str;
+}	
+
+// Constructor Function
+function  Employee()
+{
+	this.eid =  454547;
+    this.ename  =  "Smith-3";
+    this.Job =  "React and JSON"; 
+    this.salary= 100333; 
+    this.deptno=12237;
+}
+
+function   f3()
+ {		
+	var   e3  =  new Employee();	 		 
+	var str  = `Employee Id : ${e3.eid} , Employee Name : ${e3.ename} , Job : ${e3.Job} , salary : ${e3.salary}, Dept No : ${e3.deptno}`;	  
+	divObj.innerHTML  = str;
+}	
+ 
+</script>
+</body> 
+</html>

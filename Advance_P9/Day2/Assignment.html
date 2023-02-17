@@ -1,0 +1,23 @@
+<html>
+	<head></head>
+	<body>
+		<h3>JavaScript Programming -- DOM </h3>
+		<hr/>
+		
+		<input type="text"  id="t1"  value="10"  />		
+		<input type="text"  id="t2"  value="20"  />		
+
+		<p id="p1"> </p>
+		
+		<script>
+            var txtObj1 = parseInt(document.getElementById("t1").value);
+            var txtObj2 = parseInt(document.getElementById("t2").value);
+
+            var txtPara = document.getElementById("p1");
+
+            txtPara.innerHTML = txtObj1 * txtObj2;
+            
+		</script>
+		
+	</body>
+</html>

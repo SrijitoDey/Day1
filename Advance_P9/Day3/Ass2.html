@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<style>
+				.error
+				{
+						color : red; 
+				}
+		</style>
+	</head>
+	<body>
+		<h3>JavaScript Programming -- Form Validations </h3>
+		<hr/>
+		
+		 
+			<form   id="form1"   name="form1"  
+			              onsubmit="fn_submitData()"   
+						  action="login.php"   method="get">			
+			
+					Customer Name  :  <input  type="text"  id="uid"   autofocus   />  
+					 <span class="error">*</span>
+					<span id="sp1" class="error"></span>
+					<br/><br/>
+			
+					Source Station  :  <input type="text"  id="pwd1" name="pwd1"  />    
+					<span id="sp2" class="error"></span>					
+					<br/><br/>
+			
+					Destination Stations :  <input type="text"  id="pwd2" name="pwd2"  />      
+					<br/><br/>
+
+                    Contact Number: <input type="" id="" name=""/>
+					<br/><br/>
+					<input  type="submit"  value="Register"  />		
+	</form>
+		
+ 
+	 
+		
+		<script> 	 
+			  function fn_submitData()
+			  {  			 
+					 var  txtUid =  document.getElementById("uid");
+					 var  txtPwd1 =  document.getElementById("pwd1");
+					 var  txtPwd2 =  document.getElementById("pwd2");		
+					 
+					 var  spUidError =  document.getElementById("sp1");					 
+					 var  spPwdError =  document.getElementById("sp2");		
+
+					spUidError.innerHTML  = "";
+					spPwdError.innerHTML  = "";
+					 
+					 var  isFormValid = true;
+					 
+					 if(txtUid.value.length ==  0)
+					 {
+							spUidError.innerHTML = "User Id required";
+							isFormValid = false;
+					 }
+					 
+					 if(txtPwd1.value  !=  txtPwd2.value)
+					 {
+		 
+						spPwdError.innerHTML = "Password and retype password should be same";
+						isFormValid =  false;
+					 }
+					 
+					 if(isFormValid == false)
+					 {
+							event.preventDefault();
+					 }
+			 }
+		</script> 
+	</body>
+</html>

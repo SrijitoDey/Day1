@@ -1,0 +1,1 @@
+alert("Msg from ClientScript2.js")

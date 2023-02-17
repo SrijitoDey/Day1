@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Programming</h1>
+    <br>
+    <hr>
+    <br>
+    <fieldset>
+        <legend>User Login</legend>
+        User Name:
+        <input type="text" id="uname">
+        <br>
+        <br>
+        Password:
+        <input type="password" id="pswd">
+        <br>
+        <br>
+        <button onclick="pressed()">Login</button>
+        <br>
+        <br>
+        <p id="para"></p>
+    </fieldset>
+
+    <script>
+        var textObj = document.getElementById("uname");
+        var pswdObj = document.getElementById("pswd");
+        var paraObj = document.getElementById("para");
+
+        function pressed(){
+            if(textObj.value == "Admin" && pswdObj.value == "welcome"){
+                paraObj.innerText = "Welcome Admin";  
+                paraObj.style.color = "green";
+            }
+            else{
+                paraObj.innerText = "Invalid";
+                paraObj.style.color = "red";
+            }
+        }
+
+    </script>
+</body>
+</html>
